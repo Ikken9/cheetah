@@ -6,22 +6,17 @@
 
 Buzzer::Buzzer() {}
 
-void Buzzer::setup() {
-
-}
-
 void Buzzer::buzz() {
-
-}
-
-void Buzzer::buzz_intermittent() {
-
+    digitalWrite(BUZZER_PIN, HIGH);
+    delay(500);
+    digitalWrite(BUZZER_PIN, LOW);
+    delay(500);
 }
 
 void Buzzer::enable_buzzer() {
-
+    pinMode(BUZZER_PIN, OUTPUT);
 }
 
 void Buzzer::disable_buzzer() {
-
+    pinMode(BUZZER_PIN, INPUT);
 }
